@@ -9,7 +9,7 @@ tags:
 
 I switched back to the old blog I was using before [Roon](http://roon.io) (this blogging platform I used to run). Right before Roon, I had all of these fun ideas for the nerdy blogging platform that I wanted.
 
-==The main idea was all of my posts lived in [their own repo](https://github.com/soffes/blog).== This is great for a bunch of reason. Being separate from my blog's source code is nice since it changes every few years. Even when I was blogging on Roon and [Ghost](http://ghost.org), I kept this up to date (with some scripts). I saw a talk from one of the guys that works on [Archive.org](http://archive.org) and was really inspired to start saving as much as I can.
+==The main idea was all of my posts lived in [their own repo](https://github.com/soffes/blog).== This is great for a bunch of reasons. Being separate from my blog's source code is nice since it changes every few years. Even when I was blogging on Roon and [Ghost](http://ghost.org), I kept this up to date (with some scripts). I saw a talk from one of the guys that works on [Archive.org](http://archive.org) and was really inspired to start saving as much as I can.
 
 Since my posts are in their own repo, a simple ==post-commit hook can update my blog==. GitHub simply posts to [an enpoint on my blog](https://github.com/soffes/blog.soff.es/blob/master/lib/soffes/blog/application.rb#L11) that causes it to [reimport](https://github.com/soffes/blog.soff.es/blob/master/lib/soffes/blog/importer.rb) my posts into [Redis](http://redis.io). ==Another added benefit is people can PR typo fixes.== When I click the merge button on GitHub, the webhook fires and automatically updates the post on my site. Neat!
 
